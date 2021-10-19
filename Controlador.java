@@ -31,6 +31,7 @@ public class Controlador{
 		demonio demon = new demonio(0, 0, "");
 		zombie zomb = new zombie(0, 0, "");
         raidboss rboss = new raidboss(0, 0, ""); 
+		acompanante a= new acompanante(0, 0, ""); 
     v.bienvenida();
     while (opcion != 5){
       opcion = v.menuOpciones();
@@ -275,23 +276,49 @@ public class Controlador{
 											if (tipo_combatiente=="Guerrero") {
 												rboss.atacar(guerre);
 												vjugador=guerre.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else if(tipo_combatiente=="Explorador"){
 												rboss.atacar(explo);
 												vjugador=explo.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else{
 												rboss.atacar(caza);
 												vjugador=explo.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}
 											break;
 									case 2:
 											int habilidadboss=r.nextInt(3);
 											habilidadboss+=1; 
 											if (habilidadboss==1) {
+												a=rboss.colanar(esque); 
 												v.Clon();
 										}else if(habilidadboss==2){
+											rboss.variar(a, "Aumentar ataque");
 											v.variar();
 										}else{
 											v.liberar();
@@ -305,15 +332,39 @@ public class Controlador{
 											if (tipo_combatiente=="Guerrero") {
 												esque.atacar(guerre);
 												vjugador=guerre.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else if(tipo_combatiente=="Explorador"){
 												esque.atacar(explo);
 												vjugador=explo.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else{
 												esque.atacar(caza);
 												vjugador=caza.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}
 											break;
 									case 2:
@@ -342,23 +393,49 @@ public class Controlador{
 											if (tipo_combatiente=="Guerrero") {
 												rboss.atacar(guerre);
 												vjugador=guerre.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else if(tipo_combatiente=="Explorador"){
 												rboss.atacar(explo);
 												vjugador=explo.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else{
 												rboss.atacar(caza);
 												vjugador=caza.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}
 											break;
 									case 2:
 											int habilidadboss=r.nextInt(3);
 											habilidadboss+=1; 
 											if (habilidadboss==1) {
+												a=rboss.colanar(caza); 
 												v.Clon();
 										}else if(habilidadboss==2){
+											rboss.variar(a, "Aumentar ataque");
 											v.variar();
 										}else{
 											v.liberar();
@@ -372,27 +449,51 @@ public class Controlador{
 											if (tipo_combatiente=="Guerrero") {
 												demon.atacar(guerre);
 												vjugador=guerre.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else if(tipo_combatiente=="Explorador"){
 												demon.atacar(explo);
 												vjugador=explo.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}else{
 												demon.atacar(caza);
 												vjugador=caza.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}
 											break;
 									case 2:
 											if (tipo_combatiente=="Guerrero") {
-											habilidad=esque.getHabilidad();
-											esque.usarHabilidad(habilidad, guerre);
+											habilidad=demon.getHabilidad();
+											demon.usarHabilidad(habilidad, guerre);
 										}else if(tipo_combatiente=="Explorador"){
-											habilidad=esque.getHabilidad();
-											esque.usarHabilidad(habilidad, explo);
+											habilidad=demon.getHabilidad();
+											demon.usarHabilidad(habilidad, explo);
 										}else{
-											habilidad=esque.getHabilidad();
-											esque.usarHabilidad(habilidad, caza);
+											habilidad=demon.getHabilidad();
+											demon.usarHabilidad(habilidad, caza);
 										}
 											break;
 
@@ -405,20 +506,51 @@ public class Controlador{
 											if (tipo_combatiente=="Guerrero") {
 												zomb.atacar(guerre);
 												vjugador=guerre.getVida();
-												v.Atacado(vjugador);
-											}else{
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
+											}else if(tipo_combatiente=="Explorador"){
 												zomb.atacar(explo);
 												vjugador=explo.getVida();
-												v.Atacado(vjugador);
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
+											}else{
+												zomb.atacar(caza);
+												vjugador=caza.getVida();
+												if(vjugador>=0){
+													v.Atacado(vjugador);
+												}else{
+													v.Atacado(0);
+													vjugador=0; 
+													v.Perder();
+													v.Final();
+													break; 
+												}
 											}
 									break;
 									case 2:
 										if (tipo_combatiente=="Guerrero") {
 										habilidad=zomb.getHabilidad();
 										zomb.usarHabilidad(habilidad, guerre);
-									}else{
-										habilidad=esque.getHabilidad();
+									}else if(tipo_combatiente=="Explorador"){
+										habilidad=zomb.getHabilidad();
 										zomb.usarHabilidad(habilidad, explo);
+									}else{
+										habilidad=zomb.getHabilidad();
+										zomb.usarHabilidad(habilidad, caza);
 									}
 									break;
 								}

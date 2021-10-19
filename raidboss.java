@@ -18,14 +18,25 @@ public class raidboss extends combatiente{
         return nombre; 
     }
    /*Metodo para usar habilidad    */
-    public void colanar(combatiente c){
-
+    public acompanante colanar(combatiente c){
+        int vida, ataque; 
+        String habilidad; 
+        vida=c.getVida(); 
+        ataque=c.getAtaque(); 
+        habilidad=c.getHabilidad(); 
+        acompanante a = new acompanante(vida, ataque, habilidad); 
+        return a; 
     }
 
     /*Metodo para usar habilidad
     */
-    public void variar(acompanante a){
-
+    public void variar(acompanante a, String h){
+        int vida, ataque; 
+        String habilidad; 
+        vida=a.getVida(); 
+        ataque=a.getAtaque(); 
+        habilidad=h;  
+        a = new acompanante(vida, ataque, habilidad); 
     }
 
     /*Metodo para usar habilidad
